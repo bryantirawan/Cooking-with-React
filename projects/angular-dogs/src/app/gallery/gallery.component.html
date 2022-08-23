@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+
+<ul *ngFor="let randomURL of picData.message">
+    <li>
+        <img (click) = "openDialog(randomURL)" id="imageresource" src="{{randomURL}}" style="cursor: pointer; width: 125px; height: 125px;">
+      </li>
+</ul>
+
+
+

@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+<ul>
+  <li *ngFor="let breed of data.message | keyvalue">
+    <a [routerLink]="['/picsofbreed']" [queryParams]="{breed: breed.key}" target="_blank">{{breed.key}}</a> 
+    <ul> 
+      <!-- <ul *ngIf = "breed.value?.length > 0">  -->
+    <!-- trying to only show list if breed.value is not empty--> 
+      <li>
+      <!-- <li *ngFor="let sub of breed.value">{{sub}}</li> trying to iterate breed.value-->
+        {{breed.value}}
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+<app-gallery></app-gallery>
